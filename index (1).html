@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stopwatch — Clean & Responsive</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Simple, accurate stopwatch with start, pause, reset, and lap recording." />
+</head>
+<body>
+  <main class="container" role="main">
+    <header class="header">
+      <h1 class="title">Stopwatch</h1>
+      <p class="subtitle">Accurate. Responsive. Lap recording.</p>
+    </header>
+
+    <section class="stopwatch" aria-labelledby="timer-label">
+      <div id="timer" class="timer" aria-live="polite" aria-atomic="true" role="timer" aria-label="Elapsed time">00:00:00.00</div>
+      <div class="controls">
+        <button id="startPauseBtn" class="btn primary" aria-pressed="false">Start</button>
+        <button id="lapBtn" class="btn" disabled>Lap</button>
+        <button id="resetBtn" class="btn danger" disabled>Reset</button>
+      </div>
+    </section>
+
+    <section class="laps" aria-labelledby="laps-heading">
+      <h2 id="laps-heading">Laps</h2>
+      <div class="laps-actions">
+        <button id="clearLapsBtn" class="btn small" disabled>Clear Laps</button>
+        <button id="exportLapsBtn" class="btn small" disabled>Export</button>
+      </div>
+      <ul id="lapsList" class="laps-list" aria-live="polite"></ul>
+    </section>
+
+    <footer class="footer">
+      <small>Built with HTML • CSS • JavaScript</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
